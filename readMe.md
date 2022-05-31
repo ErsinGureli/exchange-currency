@@ -8,8 +8,8 @@ All dependencies are located in pom.xml
 https://github.com/ErsinGureli/exchange-currency.git
 
 #Executing program
-Maven : mvn clean package docker:build
-Terminal : run below commands in order
+#Maven : mvn clean package docker:build
+#Terminal : run below commands in order
 1 - cd docker
 2 - docker-compose up -d
 
