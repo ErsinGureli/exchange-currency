@@ -25,3 +25,7 @@ change spring.profiles.active to test
 remove docker images by the comment docker-compose down
 run maven test
 
+#project configurations
+java compiler : 11
+java language level : 11
+java target byte code version : 11
