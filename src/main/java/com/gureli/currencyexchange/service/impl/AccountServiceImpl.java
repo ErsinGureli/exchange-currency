@@ -31,10 +31,6 @@ public class AccountServiceImpl implements AccountService {
     @Transactional
     public void withdraw(Long id, BigDecimal amount) throws ResourceNotFoundException, InsufficientFundsException {
         Account account = accountRepository.findOneForUpdate(id).orElseThrow(() -> new ResourceNotFoundException("Account not found by id: " + id));
-        if (account.getBalance().compareTo(amount) < 0) {
-            throw new InsufficientFundsException(
-                    "Sending account does not have enough funds. Current balance: " + account.getBalance() + " needed amount: " + amount);
-        }
         account.setBalance(account.getBalance().subtract(amount));
         accountRepository.save(account);
     }
