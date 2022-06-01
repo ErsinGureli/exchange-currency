@@ -19,3 +19,9 @@ see 4 containers are started
 - Container postgresdb                 Started 
 - Container currency-exchange-service  Started
 
+
+#For testing:
+change spring.profiles.active to test
+remove docker images by the comment docker-compose down
+run maven test
+
